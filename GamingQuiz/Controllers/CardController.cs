@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace GamingQuiz.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class CardController : ControllerBase
     {
@@ -14,10 +13,10 @@ namespace GamingQuiz.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("card")]
         public async Task<ActionResult<List<Card>>> Get() => Ok(await _context.Cards.ToListAsync());
 
-        [HttpGet("{id}")]
+        [HttpGet("card/{id}")]
         public async Task<ActionResult<Card>> Get(int id)
         {
             var card = await _context.Cards.FindAsync(id);
@@ -27,5 +26,8 @@ namespace GamingQuiz.Controllers
             }
             return Ok(card);
         }
+
+        [HttpGet("random/card")]
+        public async Task<ActionResult<List<Card>>> Random() => Ok(await _context.Cards.OrderBy(o => System.Guid.NewGuid()).Take(1).ToListAsync());
     }
 }
