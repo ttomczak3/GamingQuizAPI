@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GamingQuiz.Controllers
 {
@@ -13,9 +14,11 @@ namespace GamingQuiz.Controllers
             _context = context;
         }
 
+        [EnableCors("MyPolicy")]
         [HttpGet("card")]
         public async Task<ActionResult<List<Card>>> Get() => Ok(await _context.Cards.ToListAsync());
 
+        [EnableCors("MyPolicy")]
         [HttpGet("card/{id}")]
         public async Task<ActionResult<Card>> Get(int id)
         {
@@ -27,6 +30,7 @@ namespace GamingQuiz.Controllers
             return Ok(card);
         }
 
+        [EnableCors("MyPolicy")]
         [HttpGet("random/card")]
         public async Task<ActionResult<List<Card>>> Random() => Ok(await _context.Cards.OrderBy(o => System.Guid.NewGuid()).Take(1).ToListAsync());
     }
