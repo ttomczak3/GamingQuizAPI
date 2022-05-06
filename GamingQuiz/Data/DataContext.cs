@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace GamingQuiz.Data
+﻿namespace GamingQuiz.Data
 {
     public class DataContext : DbContext
     {
