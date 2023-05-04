@@ -56,3 +56,7 @@ In the future, this API may be expanded to include more endpoints for managing a
 ## Contributing
 
 Contributions to this project are welcome. If you find a bug or have a suggestion for improvement, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
