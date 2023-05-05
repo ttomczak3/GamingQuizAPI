@@ -1,0 +1,59 @@
+﻿body {
+    background-color: #dad9bd;
+}
+.swagger-ui .btn.execute {
+    background-color: #173950;
+    border-color: #173950;
+}
+.swagger-ui .btn.cancel {
+    border-color: #712518;
+    color: #712518;
+}
+.swagger-ui .topbar {
+    display: none;
+}
+.swagger-ui .info .title {
+    display: none;
+}
+.swagger-ui .info .title span {
+    display: none;
+}
+.swagger-ui .info hgroup.main a {
+    display: none;
+}
+.swagger-ui .opblock.opblock-get {
+    background: none;
+    border-color: #173950;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    padding: 14px;
+}
+.swagger-ui .opblock.opblock-get .opblock-summary {
+    border-color: #173950;
+}
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background: #173950;
+}
+.swagger-ui .opblock .opblock-section-header {
+    background: none;
+}
+.swagger-ui .opblock.opblock-get .tab-header .tab-item.active h4 span:after {
+    background: #173950;
+}
+.swagger-ui .opblock-tag.no-desc span {
+    text-align: left;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    color: #712518;
+    text-shadow: 2px 1px 1px grey;
+}
+.swagger-ui section.models h4 span {
+    text-align: left;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    color: #712518;
+    text-shadow: 2px 1px 1px grey;
+}
