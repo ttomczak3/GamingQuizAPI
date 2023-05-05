@@ -10,15 +10,15 @@ The Gaming Quiz Web API provides three GET endpoints for accessing gaming-relate
 
 The following endpoints are currently available:
 
-### 1. `GET /api/card`
+### 1. `GET https://gamingquizapi.azurewebsites.net/api/card`
 
 Returns a list of all the available gaming-related questions in the database.
 
-### 2. `GET /api/card/{id}`
+### 2. `GET https://gamingquizapi.azurewebsites.net/api/card/{id}`
 
 Returns a specific gaming-related question by ID.
 
-### 3. `GET /api/random/card`
+### 3. `GET https://gamingquizapi.azurewebsites.net/api/random/card`
 
 Returns a randomly selected gaming-related question.
 
